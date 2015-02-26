@@ -1,0 +1,135 @@
+<STYLE TYPE="text/css">
+TD, TH {text-align:center}
+
+.day:hover{
+    cursor:pointer;
+}
+
+.zone:hover{
+    cursor:pointer;
+}
+</STYLE>
+
+<script type="text/javascript" src="/bitsgoacc/js/cal5.js"></script>
+<script type="text/javascript" src="/bitsgoacc/js/jquey.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#new").click(function(){
+            //Get form data and send it through ajax query
+            var date = $('#date').val();                 var zone1 = +$('#zone1').is(':checked');
+            var start = $('#start_hour').val();          var zone2 = +$('#zone2').is(':checked');
+            var no_of_hours = $('#no_of_hours').val();   var zone3 = +$('#zone3').is(':checked');
+            var contact = $('#contact_no').val();        var zone4 = +$('#zone4').is(':checked');
+            var software = $('#software').val();         var zone5 = +$('#zone5').is(':checked');
+            var lan = +$('#lan').is(':checked');         var zone6 = +$('#zone6').is(':checked');
+            var internet = +$('#internet').is(':checked');
+            var purpose = $('#purpose').val();
+
+            console.log(contact);
+
+            var sendData = { date: date, start_hour : start, no_of_hours: no_of_hours, contact: contact,   software : software, lan: lan, internet: internet, purpose:purpose, 
+                zone1 : zone1, zone2 : zone2, zone3 :zone3, zone4 : zone4, zone5 : zone5, zone6 : zone6
+            };
+
+            var query =
+                $.ajax({
+                    
+                    url: "http://127.0.0.1:8000/ccbook/request",
+                    type : "POST",
+                    crossDomain: true,
+                    data: sendData,
+                    dataType: 'json',
+                    
+                    // handle a successful response
+        success : function(json) {
+                    var json = json; 
+                    console.log("success"); // another sanity check
+                                },
+
+                    // handle a non-successful response
+        
+        error : function(json) {
+                    var json = $.parseJSON(json); 
+                    console.log("failure"); // another sanity check           
+        }
+                
+            });
+        });
+    });
+
+
+</script>
+
+<BODY onLoad="fillYears(); populateTable(document.dateChooser)">
+<H3>Check Availability and Fill the below form for a new request </H3>
+
+<HR>
+<DIV id="table-container">
+<TABLE ID="calendarTable" BORDER=1 ALIGN="center">
+<TR>
+    <TH ID="tableHeader" COLSPAN=7></TH>
+</TR>
+<TR>
+    <TH>Sun</TH>
+    <TH>Mon</TH>
+    <TH>Tue</TH>
+    <TH>Wed</TH>
+    <TH>Thu</TH>
+    <TH>Fri</TH>
+    <TH>Sat</TH>
+</TR>
+<TBODY ID="tableBody"></TBODY>
+<TR>
+    <TD COLSPAN=7>
+    <br>
+    Check Available Time Slots
+    <P>
+    <FORM NAME="dateChooser">
+        <SELECT ID = "monthchooser" NAME="chooseMonth" onChange="populateTable(this.form)">
+            <OPTION SELECTED>January
+            <OPTION>February
+            <OPTION>March
+            <OPTION>April
+            <OPTION>May
+            <OPTION>June
+            <OPTION>July
+            <OPTION>August
+            <OPTION>September
+            <OPTION>October
+            <OPTION>November
+            <OPTION>December
+        </SELECT>
+    
+        <SELECT ID = "yearchooser" NAME="chooseYear" onChange="populateTable(this.form)">
+        </SELECT>
+    
+    </FORM>
+    </P>
+    </TD>
+</TR>
+</TABLE>
+</DIV>
+
+<div class = "request_form">
+    <h1> Fill the below request form</h1>
+        <!-- To be filled from earlier form -->
+        Date : <input type = "date" id = "date"><br><br>
+        Start Hour: <input type  = "number" id = "start_hour"><br><br>
+        Number of hours : <input type  = "number" id = "no_of_hours"> <br><br>
+        Zone1 : <input type = "checkbox" id = "zone1">
+        Zone2 : <input type = "checkbox" id = "zone2"><br>
+        Zone3 : <input type = "checkbox" id = "zone3">
+        Zone4 : <input type = "checkbox" id = "zone4"><br>
+        Zone5 : <input type = "checkbox" id = "zone5">
+        Zone6 : <input type = "checkbox" id = "zone6"><br><br>
+        Contact Number  : <input type = 'text' id = "contact_no"> <br><br>
+        Softwares  : <input type = 'text' id = "software"> <br><br>
+        Lan  : <input type = 'checkbox' id = "lan"> &nbsp;&nbsp;&nbsp; Internet  : <input type = 'checkbox' name = "internet"><br><br>
+        Purpose:<textarea id="purpose" ></textarea><br><br>
+
+        <button id = "new">Submit new request</button>
+
+        
+</div>
+</BODY>

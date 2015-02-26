@@ -1,0 +1,111 @@
+<style>
+    #auditorium{
+        width:100%;
+        position: relative;
+		height:800px;
+    }
+
+    .auditorium-image{
+        width: 40%;
+        position: absolute;
+        right:1em;
+        -webkit-box-shadow: 0px 0px 8px 2px #666666;
+        -moz-box-shadow: 0px 0px 8px 2px #666666;
+        box-shadow: 0px 0px 8px 2px #666666;
+    }
+
+    .btn-download-audi-form-student{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:10em;
+		position:absolute;
+		right:30rem;
+		bottom:25rem;
+    }
+
+    .btn-download-audi-form-student:hover {
+        background: #4285ff;
+    }
+
+    .btn-download-audi-form-student::shadow #ripple {
+        color: #fff;
+    }
+
+    .btn-download-audi-form-faculty{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:10em;
+		position:absolute;
+		right:10rem;
+		bottom:25rem;
+    }
+
+    .btn-download-audi-form-faculty:hover {
+        background: #4285ff;
+    }
+
+    .btn-download-audi-form-faculty::shadow #ripple {
+        color: #fff;
+    }
+    .audi-guidelines{
+        width:40%;
+        position: absolute;
+        /*border: 1px solid silver;*/
+        padding: 0.5em;
+        left:1em;
+        font-family: Roboto;
+    }
+
+   @media screen and (max-width: 600px) {
+     .auditorium-image{
+        visibility: none;
+        display: none;
+     }
+   }
+</style>
+<div id="auditorium">
+    <div class="page-heading" style="text-align:center;width:100%;">Auditorium</div>
+    <br/><br/>
+    <img src="images/branding/audi.jpg" class="auditorium-image" />
+    <div class="audi-guidelines general-text">
+
+	<h4>Capacity: 2200<br/>
+
+	<h4>Booking procedure for Students (only for coordinators)</h4>
+
+	<ol type='1'>
+	<li> Download and print the student Auditorium booking form</li>
+	<li> Cross check your requirements and schedule with backstage coordinator and get his/her approval</li>
+	<li> Take approval from CSA President</li>
+	<li> Take approval from Associate Dean, SWD</li>
+	<li> Take approval from Estate Manager (if you require A/C)</li>
+	<li> Take approval from Faculty in Charge, CC</li>
+	<li> Handover the filled and duly signed auditorium booking form to Studio room. Write the time slot in Register</li>
+	<li> If you are not planning conduct the event which you booked, please make sure you are informing the studio room well in advance. Otherwise your department will be black listed for any further auditorium request.</li>
+	</ol>
+
+
+	<h4>Booking procedure for Faculty</h4>
+	<ol type='1'>
+	<li> Download and print the Faculty Auditorium booking form</li>
+	<li> Cross check your requirements and schedule with Studio room (you can mail / call (VOIP 450)  for getting the status of the auditorium at that slot</li>
+	<li> Take approval from your controlling officer if you are not HoD / FIC / Assoc. Dean / Dean / Director</li>
+	<li> Take approval from Estate Manager (if you require A/C)</li>
+	<li> Take approval from Faculty in Charge, CC</li>
+	<li> Handover the filled and duly signed auditorium booking form to Studio room. Write the time slot in Register</li>
+	<li> If you are not planning conduct the event which you booked, please make sure you are informing the studio room well in advance.</li>
+	</ol>  
+    </div>
+	<paper-button class="btn-download-audi-form-student" label="Student Form" raisedButton>
+        Student Form
+    </paper-button>
+	<paper-button class="btn-download-audi-form-faculty" label="Student Form" raisedButton>
+        Faculty Form
+    </paper-button>
+</div>

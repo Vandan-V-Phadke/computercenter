@@ -1,0 +1,82 @@
+<style>
+    #auditorium{
+        width:100%;
+        position: relative;
+        height:800px;
+    }
+
+    .btn-book-audi{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        float: right;
+        margin-right: 1em;
+    }
+
+    .btn-book-audi:hover {
+        background: #4285ff;
+    }
+
+    .btn-book-audi::shadow #ripple {
+        color: #fff;
+    }
+
+    #audi-booking-form{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .col1{
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    td{
+        padding-top: 10px;
+    }
+
+</style>
+<div id="auditorium">
+    <div class="page-heading" style="text-align:center;width:100%;">Auditorium</div>
+    <br/><br/>
+    <div id="audi-booking-form">
+        <table>
+            <tr><td class="col1">Date :</td><td><input type="date" id="txtDate" /></td></tr>
+            <tr><td class="col1">From :</td><td><input type="time" id="txtFromTime" /></td></tr>
+            <tr><td class="col1">To :</td><td><input type="time" id="txtToTime" /></td></tr>
+            <tr><td class="col1">AC Required :</td><td><input type="checkbox" id="chkACRequired" /></td></tr>
+            <tr><td class="col1">Projector Required :</td><td><input type="checkbox" id="chkProjectorRequired" /></td></tr>
+            <tr><td class="col1">PA Required :</td><td><input type="checkbox" id="chkPARequired" /></td></tr>
+            <tr><td class="col1">Purpose :</td><td><input type="text" id="txtPurpose" style="width:300px;" /></td></tr>
+        </table>
+        <paper-button id="btn-book-audi-complete" class="btn-book-audi" label="Book Auditorium" raisedButton>
+            Book Auditorium
+        </paper-button>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $('#btn-book-audi-complete').click(function(){
+            var date = $('#txtDate').val();
+            var from_time = $('#txtFromTime').val();
+            var to_time = $('#txtToTime').val();
+            var ac_required = +$('#chkACRequired').is(':checked');
+            var projector_required = +$('#chkProjectorRequired').is(':checked');
+            var pa_required = +$('#chkPARequired').is(':checked');
+            // var purpose = $('#txtPurpose').val();
+
+            var payload = {
+                date_of_booking : date,
+                start_time : from_time,
+                end_time : to_time,
+                ac_required : ac_required,
+                projector_required : projector_required,
+                pa_required : pa_required,
+                // purpose : purpose
+            }
+            console.log(payload);
+        });
+    });
+    </script>
+</div>

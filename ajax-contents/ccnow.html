@@ -1,0 +1,188 @@
+<style>
+    #computer-center{
+        width:100%;
+        position: relative;
+    }
+
+    .btn-download-time-table{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:13em;
+        left: 1em;
+    }
+
+    .btn-download-time-table:hover {
+        background: #4285ff;
+    }
+
+    .btn-download-time-table::shadow #ripple {
+        color: #fff;
+    }
+
+	.btn-download-cc-form{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:13em;
+        left: 1em;
+	}
+
+	.btn-download-cc-form:hover{
+        background: #4285ff;
+	}
+
+	.btn-download-cc-form::shadow #ripple{
+        color: #fff;
+	}
+
+    .computer-lab-timings{
+        width:40%;
+        /*border: 1px solid silver;*/
+        padding: 0.5em;
+        position: absolute;
+        left:1em;
+        font-family: Roboto;
+    }
+
+    .computer-lab-specs{
+        width:40%;
+        position: absolute;
+        padding: 0.5em;
+        right:1em;
+        font-family: Roboto;
+    }
+
+    .zone{
+        display: inline-block;
+        width:7em;
+        height:7em;
+        text-align: center;
+        padding-top: 1.2em;
+        padding-left: 1em ;
+
+    }
+    .col1{
+        text-align: left;
+    }
+    .col2{
+        text-align: right;
+        padding-left:20px;
+    }
+    td{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+</style>
+
+<div id="computer-center">
+    <div class="page-heading" style="text-align:center;width:100%;">Computer Lab</div>
+    <br/><br/>
+    <!-- <img src="images/server.jpg" class="server-room-image" /> -->
+    <div class="computer-lab-timings general-text">
+        <h2>Timings</h2>
+        <h3>Lab (CC-219)</h3>
+        <ul>
+            <li>Monday to Saturday: &nbsp;&nbsp;&nbsp;08:30 AM - 10:00 PM </li>
+            <li>Sundays and Holidays: 10:00AM - 10:00 PM</li>
+        </ul>
+        <!-- <h3>Office</h3>
+        <ul>
+            <li>Monday to Friday: 9:00 AM - 5:00 PM</li>
+            <li>Saturday: 9:00 AM - 1:00 PM</li>
+        </ul> -->
+    <!--
+    <paper-button class="btn-download-audi-form" label="Download Form" raisedButton>
+        Download Form
+    </paper-button>
+    -->
+        <br/>
+        <paper-button class="btn-download-time-table" label="Download Time Table" onClick="openURL('assets/time-table.pdf')" raisedButton>
+            Download Time Table
+        </paper-button>
+		<paper-button onClick="openURL('downloads/Online_Exam_Requisition_Form.pdf')" class ="btn-download-cc-form" label="Download Form" raisedButton>
+		    Download Form
+		</paper-button>
+    </div>
+    <div class="computer-lab-specs general-text">
+        <p>Central lab has six zones each having 50 computers.</p>
+            <core-tooltip class="zone">
+                <img src="images/icons/computer1.png" /><br/>
+                <b>Zone 1A</b><br/>
+                <div tip>
+                    <table>
+                        <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                        <tr><td class="col1">Operating Systems</td><td class="col2">Ubuntu 14.04 LTS</td></tr>
+                    </table>
+                </div>
+        </core-tooltip>
+        <core-tooltip class="zone">
+        <img src="images/icons/computer2.png" /><br/>
+            <b>Zone 2A</b>
+            <div tip>
+                <table>
+                    <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                    <tr><td class="col1">Operating System</td><td class="col2">Windows 7 and Ubuntu 14.04 LTS</td></tr>
+                    <tr><td class="col1">Antivirus</td><td class="col2">ESET NOD32</td></tr>
+                    <tr><td class="col1">Software</td><td class="col2">AutoCad-R14 , Matlab,  Pro-E, Xilinx, etc.</td></tr>
+                </table>
+            </div>
+        </core-tooltip>
+        <core-tooltip class="zone">
+        <img src="images/icons/computer1.png" /><br/>
+            <b>Zone 3A</b>
+            <div tip>
+                <table>
+                    <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                    <tr><td class="col1">Operating System</td><td class="col2">Windows 7 and Ununtu 14.04 LTS</td></tr>
+                    <tr><td class="col1">Antivirus</td><td class="col2">ESET NOD32</td></tr>
+                    <tr><td class="col1">Software</td><td class="col2">AutoCad-R14 , Matlab, ANSYS , Pro-E , etc.</td></tr>
+                </table>
+            </div>
+        </core-tooltip>
+        <br/>
+        <br/>
+        <core-tooltip class="zone">
+        <img src="images/icons/computer2.png" />
+            <b>Zone 1B</b>
+            <div tip>
+                <table>
+                    <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                    <tr><td class="col1">Operating System</td><td class="col2">Windows 7 and Ununtu 14.04 LTS</td></tr>
+                    <tr><td class="col1">Antivirus</td><td class="col2">ESET NOD32</td></tr>
+                    <tr><td class="col1">Software</td><td class="col2">AutoCad-R14 , Matlab, ANSYS , Pro-E , etc.</td></tr>
+                </table>
+            </div>
+        </core-tooltip>
+        <core-tooltip class="zone">
+        <img src="images/icons/computer1.png" /><br/>
+            <b>Zone 2B</b>
+            <div tip>
+                <table>
+                    <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                    <tr><td class="col1">Operating System</td><td class="col2">Windows 7 and Ubuntu 14.04 LTS</td></tr>
+                    <tr><td class="col1">Antivirus</td><td class="col2">ESET NOD32</td></tr>
+                    <tr><td class="col1">Software</td><td class="col2">AutoCad-R14 , Matlab,  Pro-E, Xilinx, etc.</td></tr>
+                </table>
+            </div>
+        </core-tooltip>
+        <core-tooltip class="zone">
+        <img src="images/icons/computer2.png" /><br/>
+            <b>Zone 3B</b>
+            <div tip>
+                <table>
+                    <tr><td class="col1">Model Type</td><td class="col2">DELL</td></tr>
+                    <tr><td class="col1">Operating System</td><td class="col2">Windows 7 and Ubuntu 14.04 LTS</td></tr>
+                    <tr><td class="col1">Antivirus</td><td class="col2">ESET NOD32</td></tr>
+                    <tr><td class="col1">Software</td><td class="col2">AutoCad-R14 , Matlab, ANSYS , Pro-E , etc.</td></tr>
+                </table>
+            </div>
+        </core-tooltip>
+        <br/>
+        <br/>
+    </div>
+</div>

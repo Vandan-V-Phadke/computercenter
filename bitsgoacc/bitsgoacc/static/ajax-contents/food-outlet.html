@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="css/image-slider.css" />
+<script type="text/javascript" src="js/jquery.flexslider-min.js" ></script>
+<script type="text/javascript" src="js/image-slider.js"></script>
+
+<style>
+    #food-outlet{
+        width:100%;
+    }
+
+    .btn-download-guidelines{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:13em;
+ 		display:block;
+		margin-top: 2rem;
+	}
+
+    .btn-download-guidelines:hover {
+        background: #4285ff;
+    }
+
+    .btn-download-guidelines::shadow #ripple {
+        color: #fff;
+    }
+
+	.links{
+		height:400px;
+		width:80%;
+		text-align: center;
+		margin: 0 auto;
+	}
+</style>
+<div id="food-outlet">
+    <div class="page-heading" style="text-align:center;width:100%;">Food Outlets</div>
+    <br/>
+	<h2 style="color:#666666;">Available Items and Approved Rates</h2>
+	<div class="links">
+		<paper-button onClick="openURL('/static/downloads/Foodking.pdf')" class="btn-download-guidelines" label="Foodking" raisedButton>
+		    Foodking
+		</paper-button>
+		<paper-button onClick="openURL('/static/downloads/ice-n-spice.pdf')" class="btn-download-guidelines" label="Ice N Spice" raisedButton>
+		    Ice N Spice
+		</paper-button>
+		<paper-button onClick="openURL('/static/downloads/institute-cafeteria.pdf')" class="btn-download-guidelines" label="Institute Cafeteria" raisedButton>
+		    Institute Cafeteria
+		</paper-button>
+		<paper-button onClick="openURL('/static/downloads/monginis.pdf')" class="btn-download-guidelines" label="Monginis" raisedButton>
+		    Monginis
+		</paper-button>
+
+		<paper-button onClick="openURL('/static/downloads/persian-court.pdf')" class="btn-download-guidelines" label="Persian Court" raisedButton>
+		    Persian Court
+		</paper-button>
+    </div>    
+</div>

@@ -1,0 +1,119 @@
+<style>
+    #lcd-services{
+        width:100%;
+        position: relative;
+		height: 700px;
+    }
+
+    .tp-room-image{
+        width: 40%;
+        position: absolute;
+        right:1em;
+        -webkit-box-shadow: 0px 0px 8px 2px #666666;
+        -moz-box-shadow: 0px 0px 8px 2px #666666;
+        box-shadow: 0px 0px 8px 2px #666666;
+    }
+
+    .btn-tpr-booking{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:10em;
+
+
+    }
+
+    .btn-tpr-booking:hover {
+        background: #4285ff;
+    }
+
+    .btn-tpr-booking::shadow #ripple {
+        color: #fff;
+    }
+
+    .sample_ppt{
+        background: #4285f4!important;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 1.1em;
+        text-decoration: none;
+        width:16em;
+        /*margin-left: 70em  ;*/
+        float: right ; 
+		position:absolute;
+		right:0;
+		bottom:5em;
+    }
+
+    .sample_ppt:hover {
+        background: #4285ff;
+    }
+
+    .sample_ppt::shadow #ripple {
+        color: #fff;
+    }
+
+    .tp-room-guidelines{
+        width:45%;
+        position: absolute;
+        padding: 0.5em;
+        left:1em;
+        font-family: Roboto;
+    }
+
+    ul{
+        list-style-type:square;
+    }
+
+   @media screen and (max-width: 600px) {
+     .tp-room-image{
+      visibility: none;
+      display: none;
+     }
+   }
+
+</style>
+
+
+<div id="lcd-services">
+    <div class="page-heading" style="text-align:center;width:100%;">Tele-presence Room</div>
+    <br/>
+    <img src="static/images/tele1.jpg" class="tp-room-image" />
+    
+    <div class="tp-room-guidelines general-text">
+		<paper-button class="btn-tpr-booking" label="Book now" onClick="openURL('http://discovery.bits-pilani.ac.in:8080/reservation/')" raisedButton>
+            Book now
+        </paper-button>
+        <h2>Guidelines for booking</h2>
+        <h3>General steps:</h3>
+        <ul>
+            <li>First time users can use the Forgot Password Link to generate a password for their account.</li>
+            <li>Login with your BITS Email user id and generated password</li>
+            <li>On welcome page click your option for booking or cancel Booking</li>
+        </ul>
+        <h3>Booking steps:</h3>
+        <ul>
+            <li>Select two or more campuses for which Booking has to be done.</li>
+            <li>Select Type of room like Telepresence Conference or Class room.</li>
+            <li>Select the desired date.</li>
+            <li>Click on Get Availability.</li>
+            <li>The returned calendar will show you availability of rooms, you can choose among the Green slots to Book.</li>
+            <li>After fixing schedule, enter basic details about the booking, its title, description etc.</li>
+            <li>Finally fix the schedule by proceeding.</li>
+        </ul>
+        <div>
+            <h3>Contact</h3>
+            E-mail: tp.booking@pilani.bits-pilani.ac.in<br/>
+            Vikram Singh Mokawat<br/>
+            [Mobile: +91-98290-48222]<br/>
+            SDET Unit, BITS Pilani
+        </div>
+        <br/>
+        
+    </div>
+<br/><br/>
+</div>
+
+

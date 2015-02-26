@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="http://cc.bits-.ac.in" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="CC" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content="" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+		<title>Computer Centre</title>
+		<link rel="shortcut icon" href="{{ STATIC_URL }}images/branding/favicon.png">
+
+
+		<!--Polymer project components-->
+		<script src="{{ STATIC_URL }}polymer/components/platform/platform.js"></script>
+    	<link rel="import" href="{{ STATIC_URL }}polymer/components/core-icons/core-icons.html">
+    	<link rel="import" href="{{ STATIC_URL }}polymer/components/paper-ripple/paper-ripple.html">
+    	<!--<link rel="import" href="{{ STATIC_URL }}polymer/components/paper-fab/paper-fab.html">-->
+    	<link rel="import" href="{{ STATIC_URL }}polymer/components/paper-button/paper-button.html">
+    	<link rel="import" href="{{ STATIC_URL }}polymer/components/core-tooltip/core-tooltip.html">
+
+		<!--global css-->
+		<link href="{{ STATIC_URL }}css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link href='{{ STATIC_URL }}css/general.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}octicons/octicons.css" />
+
+		<!--push-menu css-->
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/component.css" />
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/tipuesearch.css" />
+
+		<!--global scripts-->
+		<script src="{{ STATIC_URL }}js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/lib/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/tipuesearch_set.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/tipuesearch.min.js"></script>
+		<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+
+		<!--ajaxloader scripts-->
+		<script src="{{ STATIC_URL }}js/script.js"></script>
+	</head>
+
+	<body unresolved vertical touch-action="auto">
+
+		<header>
+			<div class="bits-logo">
+			</div>
+			<div style="font-size:2.2em;padding-top:0.35em;font-family: Roboto Black;letter-spacing: 1px;">Computer Centre</div>
+			<paper-ripple style="position: absolute;
+								top:0px;
+								left:0px;
+								width:100%;
+								height:4.7em;">
+			</paper-ripple>
+			<img src="{{ STATIC_URL }}images/branding/BITSBranding.gif" style="bottom:0 ; right: 20px ;position:absolute; height:3.7em; margin-right:0.1em ; " />
+		</header>
+
+
+		<div  style="background:#ecf0f1;" class="container">	<!-- Push Wrapper -->
+ 			<div class="mp-pusher" id="mp-pusher">	<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<h2 class="icon icon-world" style="font-size: 20px;"><a style="text-decoration: none;" id="cmdHome" href="#">
+							<span class="mega-octicon octicon-home"></span>&nbsp;&nbsp;Home</a></h2>
+						<ul>
+							<li>
+								<a id="cmdComputerCentre" href="#">
+									<!-- <span class="octicon octicon-server"></span>&nbsp;&nbsp; -->
+									Computer Centre
+								</a>
+							</li>
+
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-repo"></span>&nbsp;&nbsp;-->
+									Services
+								</a>
+								<div class="mp-level">
+									<h2 class="icon icon-shop">Services</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li>
+											<a target="_blank" href="http://10.1.1.222/cms/">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Campus Complaint Management System
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="{{ STATIC_URL }}downloads/VOIP-7th-October-2014.pdf">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												VOIP Services
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="http://10.1.1.222/histogram/">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Grade Analysis
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="https://campnet.bits-goa.ac.in/campnet">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												LDAP Authentication portal
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="https://bits-goa.webex.com/mw0401l/mywebex/default.do?siteurl=bits-goa">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												WebEx
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="http://10.1.1.56/payslip/">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Payslip
+											</a>
+										</li>
+
+										<li>
+											<a href="#">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Computer Centre Inventory
+											</a>
+										</li>
+
+
+										<li>
+											<a id="cmdTeleHome" href="#">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Tele-Presence
+											</a>
+										</li>
+
+										<li>
+											<a id="cmdLCDServices" >
+												<!--<span class="octicon octicon-device-desktop"></span>&nbsp;&nbsp;-->
+												LCD Services
+											</a>
+										</li>
+
+										<li>
+											<a id="cmdFoodOutlets" >
+												<!--<span class="octicon octicon-device-desktop"></span>&nbsp;&nbsp;-->
+												Food Outlets
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+
+								<a id="cmdComputerLab" href="#">
+									<!--<span class="octicon octicon-terminal"></span>&nbsp;&nbsp;-->
+									Computer Lab
+								</a>
+							</li>
+							<li>
+								<a id="cmdAudi" href="#">
+									<!--<span class="octicon octicon-broadcast"></span>&nbsp;&nbsp;-->
+									Auditorium
+								</a>
+							</li>
+							
+							<li>
+								<a id="cmdRequisitionForms" href="#">
+									<!--<span class="octicon octicon-file-pdf"></span>&nbsp;&nbsp;-->
+									Requisition Forms
+								</a>
+							</li>
+							
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-repo"></span>&nbsp;&nbsp;-->
+									Repositories
+								</a>
+								<div class="mp-level">
+									<h2 class="icon icon-shop">Repositories</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li>
+											<a target="_blank" href="ftp://10.1.9.224/windows/">Windows</a>
+										</li>
+										<li>
+											<a target="_blank" href="ftp://10.1.9.224/linux/">Linux</a>
+										</li>
+										<li>
+											<a target="_blank" href="http://e5.onthehub.com/d.ashx?s=46eid5gfli">Dream Spark</a>
+										</li>
+										<li>
+											<a target="_blank" href="ftp://10.1.1.223/">Acadamic FTP</a>
+										</li>
+										<li>
+											<a target="_blank" href="ftp://10.10.10.116/Bitsstudio/">Image Gallery</a>
+										</li>
+										<li>
+											<a target="_blank" href="http://www.mooc-list.com/">MOOC</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-issue-closed"></span>&nbsp;&nbsp;-->
+									Policies
+								</a>
+								<div class="mp-level">
+									<h2 class="">Policies</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li>
+											<a id="cmdpolLab">Lab</a>
+										</li>
+										<li>
+											<a id="cmdpolNetwork">Network</a>
+										</li>
+									</ul>
+								</div>
+							</li> 
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-link-external"></span>&nbsp;&nbsp;-->
+									Quick Links
+								</a>
+								<div class="mp-level">
+									<h2 class="">Quick Links</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/">University Website</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/Goa/index.aspx">Campus Website</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="https://bits-pilani-login.appspot.com/">BITS Mail</a>
+										</li>
+										<li>
+											<a target="_blank" href="http://10.1.85.41/lms/">BITS LMS</a>
+										</li>
+										<li>
+											<a target="_blank" href="http://10.1.1.242/moodle/">Photon (Moodle)</a>
+										</li>
+										<li>
+											<a target="_blank" href="https://erp.bits-pilani.ac.in/psp/ps/EMPLOYEE/HRMS/?cmd=logout">ERP HR Module</a>
+										</li>
+										<li>
+											<a target="_blank" href="https://erp.bits-pilani.ac.in:14500/psp/fsmprod/?cmd=login&errorPg=ckreq&languageCd=ENG">ERP Finance Module</a>
+										</li>
+										<li>
+											<a target="_blank" href="https://erp.bits-pilani.ac.in:4431/psp/hcsprod/?cmd=login&languageCd=ENG&">ERP ARCD Module</a>
+										</li>
+
+										<!-- <li class="icon icon-arrow-left">
+											<a href="#">Manage Faculty Profile</a>
+											<div class="mp-level">
+												<h2 style="font-size:1.1em;">Manage Faculty Profile</h2>
+												<a class="mp-back" href="#">back</a>
+												<ul>
+													<li><a target="_blank" href="http://www.bits-pilani.ac.in/microadmin/login.aspx">Microadmin Link</a></li>
+													<li><a href="http://discovery.bits-pilani.ac.in/CSDPages/Faculty_Tutorial/" target="_blank">Video Tutorial</a></li>
+													<li><a href="http://10.1.1.54/other_files/Steps%20to%20Upload%20CV%20in%20your%20profile.pdf" target="_blank">Steps to upload CV</a></li>
+												</ul>
+											</div>
+										</li> -->
+
+									</ul>
+								</div>
+							</li>
+
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-repo"></span>&nbsp;&nbsp;-->
+									Divisions
+								</a>
+								<div class="mp-level">
+									<h2 class="icon icon-shop">Divisions</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+
+
+
+<li>
+	<a target="_blank" href="http://www.bits-goa.ac.in:8080/arcd/">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Academic Registration and Counseling
+	</a>
+</li>
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/Goa/Rcedd/Rcedd">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Academic Research
+	</a>
+</li>	
+
+<li>
+	<a target="_blank" href="http://www.bitsadmission.com/">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Admissions
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/alumni">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Alumni Affairs
+	</a>
+</li>	
+
+
+<li>
+	<a target="_blank" href="https://sites.google.com/a/goa.bits-pilani.ac.in/community-welfare-unit/">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Community Welfare Unit
+	</a>
+</li>
+	
+
+<li>
+	<a target="_blank" href="http://cc.bits-goa.ac.in/payslip">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Computer Assisted Housekeeping Unit
+	</a>
+</li>
+
+<li>
+	<a target="_blank" href="ftp://10.1.1.223">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Instruction
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/university/ipcd/home">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		International Programmes and Collaborations
+	</a>
+</li>
+
+<li>
+	<a target="_blank" href="http://www.bits-goa.ac.in/Library/Index.aspx">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Library
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/Goa/mediaCentre">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Media and Publicity Unit
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/Goa/placementsOverview">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Placement Unit
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/university/practiceschool/Overview">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Practice School
+	</a>
+</li>
+
+
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/Goa/srcdd/home">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Sponsored Research and Consulting
+	</a>
+</li>
+
+
+<li>
+	<a target="_blank" href="https://swd.bits-goa.ac.in/">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		Student Welfare
+	</a>
+</li>
+
+<li>
+	<a target="_blank" href="http://www.bits-pilani.ac.in/university/wilp/wilpoverview">
+		<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+		WILP
+	</a>
+</li>
+
+
+
+	
+									</ul>
+								</div>
+							</li>
+
+							<li class="icon icon-arrow-left">
+								<a href="#">
+									<!--<span class="octicon octicon-repo"></span>&nbsp;&nbsp;-->
+									Departments
+								</a>
+								<div class="mp-level">
+									<h2 class="icon icon-shop">Departments</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/biologicalScience/biologicalScience">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Biological Sciences
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/ChemicalEngineering/ChemicalEngineering">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Chemical Engineering
+											</a>
+										</li>
+									
+
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/goaChemistry/DepartmentofChemistry">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Chemistry
+											</a>
+										</li>
+									
+
+
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/ComputerScienceInformationsSystems/ComputerScienceandInformationSystems">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Computer Science & Information Systems
+											</a>
+										</li>
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/economics/DepartmentofEconomics">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Economics
+											</a>
+										</li>
+
+
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/Electrical/goaeeehome">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												EEE & Instrumentation
+											</a>
+										</li>
+
+
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/HumanitiesandSocialSciences/HumanitiesandSocialSciences">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Humanities and Social Sciences
+											</a>
+										</li>
+									
+									
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/mathematics/DepartmentofMathematics">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Mathematics
+											</a>
+										</li>
+									
+
+										<li>
+											<a target="_blank" href="http://universe.bits-pilani.ac.in/goa/me/home">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Mechanical Engineering
+											</a>
+										</li>
+									
+
+										<li>
+											<a target="_blank" href="http://www.bits-pilani.ac.in/goa/physics/DepartmentofPhysics">
+												<!--<span class="octicon octicon-organization"></span>&nbsp;&nbsp;-->
+												Physics
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li>
+								<a id="cmdSitemap" href="#">	
+									<!-- <span ></span>&nbsp;&nbsp; -->
+									Sitemap
+								</a>
+							</li>
+							<!--
+							<li>
+								<a id="cmdteam" href="#">
+									CC Team
+								</a>
+							</li>
+							  -->
+							<li>
+								<a id="cmdcontactus" href="#">
+									<!-- <span ></span>&nbsp;&nbsp; -->
+									Contact Us
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</nav>
+				<div class="scroller">
+                    <div class="scroller-inner">
+
+                    	<div id="trigger" class="menu-trigger">
+                    		&nbsp;&nbsp;&nbsp;<span class="octicon octicon-three-bars"></span>
+                    		&nbsp;&nbsp;Menu
+                    		<paper-ripple style="position: absolute;
+                    							width:6.5em;
+                    							height:2em;
+                    							z-index:1;
+                    							color:green;
+                    							top:0px;
+                    							left:0px;">
+                    		</paper-ripple>
+
+                    	</div>
+
+
+						<div id="pic" class="pic">
+                		</div>
+                	<!--
+                	<ul class="rightul">
+                        <li class="rightli">
+                            <a class="glyphicon glyphicon-search" href="#"></a> <span class="menu">Search</span>
+                        </li>
+
+                        <li class="rightli">
+                            <a class="glyphicon glyphicon-globe" target="_blank" href="http://www.bits-pilani.ac.in/"></a> <span class="menu">University Home</span>
+                        </li>
+                        <li class="rightli">
+                            <a class="glyphicon glyphicon-expand" target="_blank" href="http://www.bits-pilani.ac.in/"></a> <span class="menu">LCD Display</span>
+                        </li>
+                        <li class="rightli">
+                            <a class="glyphicon glyphicon-earphone" href="#"></a> <span>Contact Us</span>
+                        </li>
+                        <li class="rightli">
+                            <a class="entypo-info-circled" href="#"></a> <span>About us</span>
+                        </li>
+                       <li class="rightli">
+                            <a class="entypo-location" target="_blank" href="http://maps.googleapis.com/maps/api/staticmap?center=15.3908,73.8775&zoom=15&size=1366x768&sensor=true"></a> <span>Find us</span>
+                        </li>
+                    </ul>
+                    -->
+					</div>
+					<!-- /scroller -->
+			</div>
+			</div><!-- /pusher -->
+			<footer>
+				<div class="ugc-text" style="position: absolute;bottom: 1em;font-size:0.9em;">An institution deemed to be a University estd. vide Sec.3 of the<br/>UGC Act,1956 under notification # F.12-23/63.U-2 of Jun 18, 1964</div>
+				<div class="copyright-text" style="position: absolute;bottom: 1em;text-align: center;width:100%;">&copy; 2011-2014 BITS Pilani</div>
+				<div style="position: absolute;bottom: 1em;text-align: right;width:40%;right:1em;">
+
+				</div>
+				<paper-ripple style="position: absolute;
+								top:0px;
+								left:0px;
+								width:100%;
+								height:7.4em;">
+				</paper-ripple>
+			</footer>
+		</div><!-- /container -->
+        <script src="{{ STATIC_URL }}js/classie.js"></script>
+		<script src="{{ STATIC_URL }}js/mlpushmenu.js"></script>
+		<script>
+			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+
+            // Small script to open a link from a paper button
+            function openURL(url){
+                //window.location.href = "assets/time-table.pdf";
+                var win = window.open(url, '_blank');
+                win.focus();
+            }
+        </script>
+	</body>
+</html>
